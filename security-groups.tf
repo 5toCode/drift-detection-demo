@@ -8,6 +8,7 @@ resource "aws_security_group" "drift_detection_demo" {
 
     cidr_blocks = [
       "10.0.0.0/16",
+      "192.168.1.0/24",
     ]
   }
 }
