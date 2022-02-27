@@ -5,6 +5,7 @@ resource "aws_security_group" "drift_demo_2" {
   vpc_id      = "vpc-00e7e47a"
 
   ingress {
+    cidr_blocks = ["0.0.0.0/0", "10.0.0.0/16", "192.168.1.0/24"]
     self      = false
     from_port = 22
     to_port   = 22
@@ -26,4 +27,5 @@ resource "aws_security_group" "drift_demo_2" {
     yor_trace            = "e2e39618-e117-4493-8478-24ee078bf11e"
   }
 }
+
 
